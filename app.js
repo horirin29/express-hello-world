@@ -66,7 +66,7 @@ const html = `
       Hello from Render!
     </section>
     <subsection>
-    日本語も行けそうです！
+    日本語も行けそうです！PRを作ってみます。
     </subsection>
   </body>
 </html>
