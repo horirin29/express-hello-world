@@ -42,6 +42,7 @@ const html = `
         background: white;
       }
       section {
+        color: lightpink;
         border-radius: 1em;
         padding: 1em;
         position: absolute;
@@ -54,7 +55,7 @@ const html = `
         border-radius: 1em;
         padding: 1em;
         position: absolute;
-        top: 80%;
+        top: 50%;
         left: 50%;
         margin-right: -50%;
         transform: rotate(3deg) translate(-50%, -50%);
