@@ -57,7 +57,7 @@ const html = `
         top: 80%;
         left: 50%;
         margin-right: -50%;
-        transform: rotate(3deg);
+        transform: rotate(3deg) translate(-50%, -50%);
       }
       </style>
   </head>
