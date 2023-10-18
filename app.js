@@ -1,6 +1,13 @@
 const express = require("express");
+const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3001;
+
+// urlencodedとjsonは別々に初期化する
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
 
 app.get("/", (req, res) => res.type('html').send(html));
 
@@ -76,6 +83,15 @@ const html = `
 </html>
 `
 
+// app.post('/', function(req, res) {
+//   res.send('POST is sended.');
+// })
+
 app.post('/', function(req, res) {
-  res.send('POST is sended.');
+  // リクエストボディを出力
+  console.log(req.body);
+  // パラメータ名、nameを出力
+  console.log(req.body.name);
+
+  res.send('POST request to the homepage');
 })
