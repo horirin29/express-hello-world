@@ -75,3 +75,7 @@ const html = `
   </body>
 </html>
 `
+
+app.post('/', function(req, res) {
+  res.send('POST is sended.');
+})
