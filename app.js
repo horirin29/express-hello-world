@@ -66,6 +66,9 @@ const html = `
     <section>
       Hello from Render!
     </section>
+    <section>
+      にほんご
+    </section>
     <subsection>
     無料でサービスをリリースしてみよう！
     </subsection>
