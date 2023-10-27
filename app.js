@@ -94,5 +94,19 @@ app.post('/', function(req, res) {
   // パラメータ名、nameを出力
   console.log(req.body.name);
 
+  // 接続元ipの取得
+  var ip = '0.0.0.0';
+  if (req.headers['x-forwarded-for']) {
+    ip = req.headers['x-forwarded-for'];
+  }else if (req.connection && req.connection.remoteAddress) {
+    ip = req.connection.remoteAddress;
+  }else if (req.connection.socket && req.connection.socket.remoteAddress) {
+    ip = req.connection.socket.remoteAddress;
+  }else if (req.socket && req.socket.remoteAddress) {
+    ip = req.socket.remoteAddress;
+  } 
+  // ipを出力
+  console.log(ip);
+
   res.send('POST request to the homepage');
 })
